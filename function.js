@@ -32,3 +32,12 @@ function reverse(x) {
         return x.split('').reverse().join('');
     }
 }
+// 类型断言
+function getLength(something) {
+    if (something.length) { // 赋予了联合属性时，只能使用联合属性的共有属性，如需要单独类型的属性，需要用到类型断言
+        return something.length;
+    }
+    else {
+        return something.toString().length;
+    }
+}
